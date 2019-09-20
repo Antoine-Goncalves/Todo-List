@@ -13,11 +13,11 @@ let li;
 //Functions
 
 function inputLength() {
-    return input.value.length;
+    	return input.value.length;
 }
 
 function resetInput() {
-    input.value = "";
+    	input.value = "";
 }
 
 function CapitalizeInput() {
@@ -25,15 +25,15 @@ function CapitalizeInput() {
 }
 
 function addTextToLi() {
-    li.append(document.createTextNode(CapitalizeInput()));
+    	li.append(document.createTextNode(CapitalizeInput()));
 }
 
 function createNewLi() {
-    li = document.createElement("li");
+    	li = document.createElement("li");
 }
 
 function insertLiToUl() {
-    ul.insertAdjacentElement("beforeend", li);
+    	ul.insertAdjacentElement("beforeend", li);
 }
 
 function createListInUl() {
@@ -44,19 +44,27 @@ function createListInUl() {
 }
 
 function addListAfterClick() {
-    if (inputLength() > 0) {
-        createListInUl();
-    }
+    	if (inputLength() > 0) {
+        	createListInUl();
+    	}
 }
 
-function addListAfterKeyPress(event) {
-    if (inputLength() > 0 && event.keyCode === 13) {
-        createListInUl();
-    }
+function addListAfterKeypress(event) {
+	if (inputLength() > 0 && event.keyCode === 13) {
+        	createListInUl();
+    	}
+}
+
+function addAlertAfterClick() {
+	if (inputLength() == 0) {
+		alert("Il faut écrire quelque chose 🙄 , petit malin 🤭");
+	}
 }
 
 // Processus
 
 button.addEventListener("click", addListAfterClick);
 
-input.addEventListener("keypress", addListAfterKeyPress);
+button.addEventListener("click", addAlertAfterClick);
+
+input.addEventListener("keypress", addListAfterKeypress);
