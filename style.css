@@ -1,0 +1,21 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #FFFC56;
+}
+
+li {
+	list-style-type: none;
+}
+
+h1 {
+	font-family: 'Mansalva', cursive;
+	font-size: 5rem;
+}
+
+input, button {
+	border-color: black;
+	border-radius: 1rem;
+}
