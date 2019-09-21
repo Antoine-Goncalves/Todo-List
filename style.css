@@ -15,7 +15,16 @@ h1 {
 	font-size: 5rem;
 }
 
+input {
+	padding-left: .5rem;
+}
+
 input, button {
+	font-family: 'Roboto Mono', monospace;
 	border-color: black;
 	border-radius: 1rem;
+}
+
+.supp {
+	margin: .5rem;
 }
