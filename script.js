@@ -36,11 +36,32 @@ function insertLiToUl() {
     	ul.insertAdjacentElement("beforeend", li);
 }
 
+function addSymbolSupp() {
+    	let buttonSupp = document.createElement("button");
+    	let supp = document.createTextNode("-");
+    	buttonSupp.className = "supp";
+    	buttonSupp.append(supp);
+    	li.append(buttonSupp);
+}
+
+function deleteLi() {
+    	let del = document.getElementsByClassName("supp");
+	let li;
+	for ( let i = 0; i < del.length; i++) {
+		del[i].onclick = function () {
+			li = this.parentElement;
+			li.remove();
+		}
+	}
+}
+
 function createListInUl() {
     	createNewLi();
     	addTextToLi();
     	insertLiToUl();
     	resetInput();
+	addSymbolSupp();
+	deleteLi();
 }
 
 function addListAfterClick() {
