@@ -6,17 +6,22 @@ body {
 	background-color: #FFFC56;
 }
 
+ul {
+	margin-left: -2rem;
+}
+
 li {
 	list-style-type: none;
-	font-family: 'Mansalva', cursive;
+	font-family: 'Roboto Mono', monospace;
 	color: white;
-	font-size: 2.4rem;
+	font-size: 1.5rem;
 }
 
 h1 {
 	font-family: 'Mansalva', cursive;
 	font-size: 5rem;
 	color: white;
+	margin-left: -4rem;
 }
 
 input {
@@ -33,8 +38,13 @@ input, button {
 	margin: .5rem;
 }
 
+.darkmode {
+	margin-left: -6.5rem;
+}
+
 .checked {
 	text-decoration: line-through;
     	color: #BF0413;
-	font-size: 2rem;
+	font-size: 1.2rem;
+	margin-left: 2rem;
 }
