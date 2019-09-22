@@ -8,6 +8,8 @@ const input = document.getElementById("input");
 
 const ul = document.querySelector("ul");
 
+const darkMode = document.getElementById("darkMode");
+
 let li;
 
 //Functions
@@ -64,20 +66,35 @@ function createListInUl() {
 	deleteLi();
 }
 
+function addDarkMode() {
+	let color = document.body.style.background;
+
+    	if (color === 'rgb(255, 252, 86) none repeat scroll 0% 0%') {
+        	document.body.style.background = "#0D0D0D";
+    	}
+    	else {
+        	document.body.style.background = "#FFFC56";
+    	}
+}
+
+function liBarred(check) {
+    	if (check.target.tagName === 'LI') {
+		check.target.classList.toggle('checked');
+    	}
+}
+
 function addListAfterClick() {
     	if (inputLength() > 0) {
         	createListInUl();
-    	}
+    	} else {
+		alert("Il faut écrire quelque chose 🙄 , petit malin 🤭");
+	}
 }
 
 function addListAfterKeypress(event) {
 	if (inputLength() > 0 && event.keyCode === 13) {
         	createListInUl();
-    	}
-}
-
-function addAlertAfterClick() {
-	if (inputLength() == 0) {
+    	} else if (inputLength() == 0 && event.keyCode === 13) {
 		alert("Il faut écrire quelque chose 🙄 , petit malin 🤭");
 	}
 }
@@ -86,6 +103,8 @@ function addAlertAfterClick() {
 
 button.addEventListener("click", addListAfterClick);
 
-button.addEventListener("click", addAlertAfterClick);
-
 input.addEventListener("keypress", addListAfterKeypress);
+
+ul.addEventListener('click', liBarred);
+
+darkMode.addEventListener("click", addDarkMode);
