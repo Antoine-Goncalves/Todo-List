@@ -38,7 +38,7 @@ function insertLiToUl() {
     	ul.insertAdjacentElement("beforeend", li);
 }
 
-function addSymbolSupp() {
+function addSymbolDelete() {
     	let buttonSupp = document.createElement("button");
     	let supp = document.createTextNode("-");
     	buttonSupp.className = "supp";
@@ -62,7 +62,7 @@ function createListInUl() {
     	addTextToLi();
     	insertLiToUl();
     	resetInput();
-	addSymbolSupp();
+	addSymbolDelete();
 	deleteLi();
 }
 
