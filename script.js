@@ -67,13 +67,13 @@ function createListInUl() {
 }
 
 function addDarkMode() {
-	let color = document.body.style.background;
+	let color = document.body.style.backgroundColor;
 
-    	if (color === 'rgb(255, 252, 86) none repeat scroll 0% 0%') {
-        	document.body.style.background = "#0D0D0D";
+    	if (color === "rgb(255, 252, 86)") {
+        	document.body.style.backgroundColor = "#0D0D0D";
     	}
     	else {
-        	document.body.style.background = "#FFFC56";
+        	document.body.style.backgroundColor = "#FFFC56";
     	}
 }
 
